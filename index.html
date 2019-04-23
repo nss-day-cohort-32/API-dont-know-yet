@@ -10,7 +10,31 @@
 <body>
     <h1>Welcome to Nashville!</h1>
     <p>What would you like to do today?</p>
-        <form>
+        <article>
+            <div>
+                <input type="text">
+                <button></button>
+            </div>
+                <div class="result"></div>
+
+            <div> <!-- Restaurant Div Starts Here -->
+                <label>Restaurant Type</label>
+                <select class="cuisineList" name="cuisine-list">
+                    <option value="">Select One</option>
+                    <option value = "American" id="1">American</option>
+                    <option value = "BBQ" id ="193">BBQ</option>
+                    <option value = "Burger" id="168">Burger</option>
+                    <option value = "Chinese" id="25">Chinese</option>
+                    <option value = "Fast Food" id="40">Fast Food</option>
+                    <option value = "Italian" id="55">Italian</option>
+                    <option value = "Mexican" id="73">Mexican</option>
+                    <option value = "Pizza" id="82">Pizza</option>
+                    <option value = "Sushi" id="177">Sushi</option>
+                    <option value = "Vegetarian" id="308">Vegetarian</option>
+                </select>
+                <!-- <button></button> -->
+            </div> <!-- Restaurant Div Ends Here -->
+
             <div>
                 <input type="text">
                 <button></button>
@@ -19,15 +43,7 @@
                 <input type="text">
                 <button></button>
             </div>
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-        </form>
+        </article>
     <h2>Your Results</h2>
     <p>Save your favorites and add them to your itinerary!</p>
         <div class="results-container">
