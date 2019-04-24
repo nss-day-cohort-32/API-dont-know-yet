@@ -1,6 +1,7 @@
     
 let restaurantOptions = document.querySelector("#restaurantOptions");
 let cuisineIdNumber = "";
+let resultsDiv = document.querySelector("#displayFoodResults")
 
 // function for making fetch call after event listener happens
 let cuisineChoices = function () {
@@ -11,7 +12,7 @@ let cuisineChoices = function () {
 fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&count=4&cuisines=${cuisineIdNumber}`, {
         headers: {
             "Accept": "application/json",
-            "user-key": "01f4ed4db4b7be953e0d8582af28907d"
+            "user-key": apiKeyZomato
         }
     })
     .then(response => response.json())
@@ -27,15 +28,37 @@ fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=
             let restaurantName = cuisineChoices.restaurants[i].restaurant.name;
             let restaurantAddress = cuisineChoices.restaurants[i].restaurant.location.address;
             let displayFoodResults = document.querySelector("#displayFoodResults");
-            displayFoodResults.innerHTML += `<div id = "foodDiv[i]">
+            displayFoodResults.innerHTML += `<div class = "foodDiv" id=${cuisineChoices.restaurants[i].restaurant.id}>
             <h2>${restaurantName}<h2>
             <p>${restaurantAddress}</p>
-            <button id = "foodSave[i]">SAVE</button>
+            <button class = "addToItinerary">SAVE</button>
             </div>`
         }
+        // event listener for save button in Itinerary section 
+        // document.querySelector(".addToItinerary").addEventListener("click", saveItinerary);
+        restaurantListener()
     })
 }
+function restaurantListener() {
 
+    for (let i = 0; i < 4; i++) {
+        let saveButton = document.querySelectorAll(".addToItinerary")
+        saveButton[i].addEventListener("click", () => {
+            console.log("clicked", i);
+            console.log("targettttt", event.target.parentElement.parentElement.id)
+
+        saveItinerary(event.target.parentElement.parentElement);
+        })
+    }
+}
+
+// function for saving restaurant results to itinerary
+function saveItinerary(resultsDiv) {
+    // let foodDiv = document.querySelector("#foodItinerary")
+    // foodDiv.innerHTML = null;
+    let itineraryDiv = document.querySelector("#foodItinerary");
+    itineraryDiv.appendChild(resultsDiv) 
+}
 // event listener & function for choosing cuisine from drop down
 restaurantOptions.onchange = function() {
     cuisineIdNumber = restaurantOptions.options[restaurantOptions.selectedIndex].value;
@@ -43,8 +66,8 @@ restaurantOptions.onchange = function() {
     // console.log("cuisine id number", cuisineIdNumber)
 }
 
-// function for saving restaurant results to itinerary
+
+
+// Notes to Self:
 // Itinerary div class is itinerary-container
-
-
 // Event listener function needs to have fetch call at the end of it
