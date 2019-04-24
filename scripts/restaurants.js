@@ -2,9 +2,11 @@
 let restaurantOptions = document.querySelector("#restaurantOptions");
 let cuisineIdNumber = "";
 
-console.log(cuisineIdNumber);
-
+// function for making fetch call after event listener happens
 let cuisineChoices = function () {
+    let displayFoodResults = document.querySelector("#displayFoodResults");
+    displayFoodResults.innerHTML = "";
+    console.log("Cuisine id selected is ", cuisineIdNumber);
 // fetch call for getting cuisine specific restaurants for Nashville
 fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&count=4&cuisines=${cuisineIdNumber}`, {
         headers: {
@@ -14,7 +16,7 @@ fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=
     })
     .then(response => response.json())
     .then(cuisineChoices => {
-        console.table("cuisine choices", cuisineChoices);
+        // console.table("cuisine choices", cuisineChoices);
         // const restaurantName = results.restaurants[3].restaurant.name;
         // const restaurantAddress = results.restaurants[3].restaurant.location.address;
         // const foodCuisine = results.restaurants[3].restaurant.cuisines;
@@ -34,11 +36,15 @@ fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=
     })
 }
 
-// function for choosing cuisine from drop down
+// event listener & function for choosing cuisine from drop down
 restaurantOptions.onchange = function() {
     cuisineIdNumber = restaurantOptions.options[restaurantOptions.selectedIndex].value;
     cuisineChoices()
-    console.log("cuisine id number", cuisineIdNumber)
+    // console.log("cuisine id number", cuisineIdNumber)
 }
+
+// function for saving restaurant results to itinerary
+// Itinerary div class is itinerary-container
+
 
 // Event listener function needs to have fetch call at the end of it
