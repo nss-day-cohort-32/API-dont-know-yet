@@ -1,4 +1,4 @@
-    
+
 let restaurantOptions = document.querySelector("#restaurantOptions");
 let cuisineIdNumber = "";
 let resultsDiv = document.querySelector("#displayFoodResults")
@@ -23,7 +23,7 @@ fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=
         // const foodCuisine = results.restaurants[3].restaurant.cuisines;
         // console.log(restaurantData.restaurants[i].restaurant.name);
         for (let i = 0; i < cuisineChoices.restaurants.length; i++) {
-            console.log("Name -", cuisineChoices.restaurants[i].restaurant.name, 
+            console.log("Name -", cuisineChoices.restaurants[i].restaurant.name,
                 "Address -", cuisineChoices.restaurants[i].restaurant.location.address);
             let restaurantName = cuisineChoices.restaurants[i].restaurant.name;
             let restaurantAddress = cuisineChoices.restaurants[i].restaurant.location.address;
@@ -34,7 +34,7 @@ fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=
             <button class = "addToItinerary">SAVE</button>
             </div>`
         }
-        // event listener for save button in Itinerary section 
+        // event listener for save button in Itinerary section
         // document.querySelector(".addToItinerary").addEventListener("click", saveItinerary);
         restaurantListener()
     })
@@ -57,7 +57,7 @@ function saveItinerary(resultsDiv) {
     // let foodDiv = document.querySelector("#foodItinerary")
     // foodDiv.innerHTML = null;
     let itineraryDiv = document.querySelector("#foodItinerary");
-    itineraryDiv.appendChild(resultsDiv) 
+    itineraryDiv.appendChild(resultsDiv)
 }
 // event listener & function for choosing cuisine from drop down
 restaurantOptions.onchange = function() {

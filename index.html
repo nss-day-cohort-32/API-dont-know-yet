@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Welcome to Nashville</title>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body class="mainContainer">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    </div>
     <h1>Welcome to Nashville!</h1>
     <p>What would you like to do today?</p>
-        <article>
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-                <div class="result"></div>
+    <article class="search-container">
+      <div class="buttons">
+        <!-- Meetup Div Starts Here -->
+        <div>
+          <input id="meet" placeholder="Search for meet ups" type="text" />
+          <br />
+          <button id="getData">Search</button>
+        </div> 
+        <!-- Meetup Div Ends Here -->
 
-            <div> <!-- Restaurant Div Starts Here -->
-                <label>Restaurant Type</label>
-                <select id="restaurantOptions" name="cuisine-list">
-                    <option value="">Select One</option>
-                    <option value = "1">American</option>
-                    <option value = "193">BBQ</option>
-                    <option value = "168">Burger</option>
-                    <option value = "25">Chinese</option>
-                    <option value = "40">Fast Food</option>
-                    <option value = "55">Italian</option>
-                    <option value = "73">Mexican</option>
-                    <option value = "82">Pizza</option>
-                    <option value = "177">Sushi</option>
-                    <option value = "308">Vegetarian</option>
-                </select>
-            </div> <!-- Restaurant Div Ends Here -->
-
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-        </article>
+      </div>
+        <div> <!-- Restaurant Div Starts Here -->
+            <label>Restaurant Type</label>
+            <select id="restaurantOptions" name="cuisine-list">
+                <option value="">Select One</option>
+                <option value = "1">American</option>
+                <option value = "193">BBQ</option>
+                <option value = "168">Burger</option>
+                <option value = "25">Chinese</option>
+                <option value = "40">Fast Food</option>
+                <option value = "55">Italian</option>
+                <option value = "73">Mexican</option>
+                <option value = "82">Pizza</option>
+                <option value = "177">Sushi</option>
+                <option value = "308">Vegetarian</option>
+            </select>
+        </div> <!-- Restaurant Div Ends Here -->
+      </article>
     <h2>Your Results</h2>
 
     <p>Save your favorites and add them to your itinerary!</p>
@@ -54,5 +54,6 @@
 
     <script src ="./scripts/apiKey.js"></script>
     <script src ="./scripts/restaurants.js"></script>
+    <script src="./scripts/meetups.js"></script>
 </body>
 </html>
