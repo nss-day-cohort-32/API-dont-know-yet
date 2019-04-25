@@ -15,6 +15,27 @@
     </div>
     <h1>Welcome to Nashville!</h1>
     <p>What would you like to do today?</p>
+        <article>
+            <div id="park-input">
+                <h3>Parks</h3>
+                <input type="checkbox" id="F1" name="basketball" value="basketball_courts"> Basketball<br>
+                <input type="checkbox" id="F2" name="dog park" value="dog_park"> Dog park<br>
+                <input type="checkbox" id="F3" name="baseball" value="baseball_fields"> Baseball<br>
+                <input type="checkbox" id="F4" name="hiking" value="hiking_trails"> Hiking<br>
+                <input type="checkbox" id="F5" name="lake" value="lake"> Lake<br>
+                <input type="checkbox" id="F6" name="biking" value="mountain_bike_trails"> Biking<br>
+                <input type="checkbox" id="F7" name="picnic" value="picnic_shelters"> Picnic<br>
+                <input type="checkbox" id="F8" name="volleyball" value="volleyball"> Volleyball<br>
+                <input type="checkbox" id="F9" name="skate park" value="skate_park"> Skate park<br>
+                <input type="checkbox" id="F10" name="garden" value="community_garden"> Garden<br>
+                <input type="checkbox" id="F11" name="soccer" value="soccer_fields"> Soccer<br>
+                <button id="parkBtn">Search</button>
+            </div>
+            <div>
+                <input type="text">
+                <button></button>
+            </div>
+                <div class="result"></div>
     <article class="search-container">
       <div class="buttons">
         <!-- Meetup Div Starts Here -->
@@ -44,14 +65,17 @@
         </div> <!-- Restaurant Div Ends Here -->
       </article>
     <h2>Your Results</h2>
+    <p>Save your favorites and add them to your itinerary!</p>
+        <div id="results-container">
 
     <p>Save your favorites and add them to your itinerary!</p>
     <div id="results-container"></div>
         <div id="displayFoodResults"></div>  
     <h2>My Itinerary</h2>
-        <div id="itinerary-container"></div>
-            <div id = "foodItinerary"></div>
+        <div id="itinerary-container">
 
+        </div>
+    <script src ="./scripts/parks.js"></script>
     <script src ="./scripts/apiKey.js"></script>
     <script src ="./scripts/restaurants.js"></script>
     <script src="./scripts/meetups.js"></script>
