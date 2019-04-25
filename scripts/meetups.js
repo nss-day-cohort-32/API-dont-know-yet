@@ -42,7 +42,7 @@ printSavedEvents = () => {
 let containerEl = document.querySelector("#results-container");
 function meetupData(meet_type) {
   fetch(
-    `https://www.eventbriteapi.com/v3/events/search/?sort_by=date&q=${meet_type}&location.address=nashville&token=TNU45FGFW2DUFRRWGLGQ`,
+    `https://www.eventbriteapi.com/v3/events/search/?sort_by=date&q=${meet_type}&location.address=nashville&token=${eventApi}`,
     {
       headers: {
         Accept: "application/json"

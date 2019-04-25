@@ -12,7 +12,7 @@ let cuisineChoices = function () {
 fetch(`https://developers.zomato.com/api/v2.1/search?entity_id=1138&entity_type=city&count=4&cuisines=${cuisineIdNumber}`, {
         headers: {
             "Accept": "application/json",
-            "user-key": "01f4ed4db4b7be953e0d8582af28907d"
+            "user-key": apiKeyZomato
         }
     })
     .then(response => response.json())
