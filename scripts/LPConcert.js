@@ -16,7 +16,7 @@ concertButton.addEventListener("click", () => {
 
 function postData(keyword) {
   fetch(
-    `https://app.ticketmaster.com/discovery/v2/events?apikey=s29Z5gG4Zocceb73nd3PjwxGC9OfGjus&keyword=${keyword}&size=3&sort=date,asc&city=Nashville&countryCode=US`
+    `https://app.ticketmaster.com/discovery/v2/events?apikey=${concertApi}&keyword=${keyword}&size=3&sort=date,asc&city=Nashville&countryCode=US`
   )
     .then(concerts => concerts.json())
     .then(parsedConcerts => {
