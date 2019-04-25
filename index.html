@@ -17,86 +17,43 @@
     <p>What would you like to do today?</p>
     <article class="search-container">
       <div class="buttons">
-        <div>
-          <input type="text" placeholder="Search for parks" />
-          <br /><br />
-          <button>Search</button>
-        </div>
-        <div>
-          <input type="text" placeholder="Search for concerts" />
-          <br /><br />
-          <button>Search</button>
-        </div>
-        <div>
-          <input type="text" placeholder="Search for restaurants" />
-          <br /><br />
-          <button>Search</button>
-        </div>
+        <!-- Meetup Div Starts Here -->
         <div>
           <input id="meet" placeholder="Search for meet ups" type="text" />
-          <br /><br />
+          <br />
           <button id="getData">Search</button>
-        </div>
+        </div> 
+        <!-- Meetup Div Ends Here -->
+
       </div>
-    </article>
+        <div> <!-- Restaurant Div Starts Here -->
+            <label>Restaurant Type</label>
+            <select id="restaurantOptions" name="cuisine-list">
+                <option value="">Select One</option>
+                <option value = "1">American</option>
+                <option value = "193">BBQ</option>
+                <option value = "168">Burger</option>
+                <option value = "25">Chinese</option>
+                <option value = "40">Fast Food</option>
+                <option value = "55">Italian</option>
+                <option value = "73">Mexican</option>
+                <option value = "82">Pizza</option>
+                <option value = "177">Sushi</option>
+                <option value = "308">Vegetarian</option>
+            </select>
+        </div> <!-- Restaurant Div Ends Here -->
+      </article>
     <h2>Your Results</h2>
+
     <p>Save your favorites and add them to your itinerary!</p>
     <div id="results-container"></div>
+        <div id="displayFoodResults"></div>  
     <h2>My Itinerary</h2>
-    <div id="itinerary-container"></div>
+        <div id="itinerary-container"></div>
+            <div id = "foodItinerary"></div>
+
+    <!-- <script src ="./scripts/apiKey.js"></script> -->
+    <script src ="./scripts/restaurants.js"></script>
     <script src="./scripts/meetups.js"></script>
-  </body>
+</body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Welcome to Nashville</title>
-  </head>
-
-  <body>
-    <h1>Welcome to Nashville!</h1>
-    <p>What would you like to do today?</p> -->
-<!-- Container holds all the content on the page -->
-<!-- 
-    <article class="container"> -->
-<!-- Following divs inside this article are 3 containers placed inside the article container -->
-<!-- 
-        <h3>Parks</h3>
-        <input type="text" placeholder="search for parks" />
-        <button></button>
-        <p class="parks"></p>
-        <h3>Restaurants</h3>
-        <input type="text" placeholder="search for restaurants" />
-        <button></button>
-        <p class="restaurants"></p>
-        <h3>Meet Ups</h3>
-        <input type="text" placeholder="search for meet-ups" />
-        <button></button>
-        <p class="meetUp"></p>
-        <h3>Concerts</h3>
-        <input type="text" placeholder="search for concerts" />
-        <button></button>
-        <p class="concerts"></p>
-      </div>
-      <div class="search-container"></div>
-      <div class="results-container">
-        <h2>Your Results</h2>
-        <p>Save your favorites and add them to your itinerary!</p>
-      </div>
-      <div class="itinerary-container">
-        <h2>My Itinerary</h2>
-    </article>
-
-    
-
-    <script src="./scripts/data.js"></script>
-    <script src="./scripts/domBuilder.js"></script>
-    <script src="./scripts/DomComponents.js"></script>
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/eventListener.js"></script>
-  </body>
-</html> -->

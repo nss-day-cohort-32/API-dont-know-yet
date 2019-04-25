@@ -85,7 +85,7 @@ h4 {
   text-align: center;
 }
 
-.search-container {
+/* .search-container {
   text-align: left;
   border: 15px solid #c0ffee;
   background-color: rgb(254, 128, 128);
@@ -110,7 +110,7 @@ h4 {
   padding: 100px;
   margin: 45px;
   border-radius: 50;
-}
+} */
 
 .buttons {
   text-align: center;
