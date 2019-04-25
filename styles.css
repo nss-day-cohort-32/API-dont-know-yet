@@ -78,9 +78,12 @@ h2 {
 
 h3,
 h4 {
-  color: #b061ff;
+  color: rgb(255, 255, 161);
 }
 
+div {
+  padding: 1em;
+}
 .mainContainer {
   text-align: center;
 }
