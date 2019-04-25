@@ -1,41 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Welcome to Nashville</title>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body class="mainContainer">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    </div>
     <h1>Welcome to Nashville!</h1>
     <p>What would you like to do today?</p>
-        <form>
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-            <div>
-                <input type="text">
-                <button></button>
-            </div>
-        </form>
+    <article class="search-container">
+      <div class="buttons">
+        <div>
+          <input type="text" placeholder="Search for parks" />
+          <br /><br />
+          <button>Search</button>
+        </div>
+        <div>
+          <input type="text" placeholder="Search for concerts" />
+          <br /><br />
+          <button>Search</button>
+        </div>
+        <div>
+          <input type="text" placeholder="Search for restaurants" />
+          <br /><br />
+          <button>Search</button>
+        </div>
+        <div>
+          <input id="meet" placeholder="Search for meet ups" type="text" />
+          <br /><br />
+          <button id="getData">Search</button>
+        </div>
+      </div>
+    </article>
     <h2>Your Results</h2>
     <p>Save your favorites and add them to your itinerary!</p>
-        <div class="results-container">
-
-        </div>
+    <div id="results-container"></div>
     <h2>My Itinerary</h2>
-        <div class="itinerary-container">
-
-        </div>
-</body>
+    <div id="itinerary-container"></div>
+    <script src="./scripts/meetups.js"></script>
+  </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Welcome to Nashville</title>
+  </head>
+
+  <body>
+    <h1>Welcome to Nashville!</h1>
+    <p>What would you like to do today?</p> -->
+<!-- Container holds all the content on the page -->
+<!-- 
+    <article class="container"> -->
+<!-- Following divs inside this article are 3 containers placed inside the article container -->
+<!-- 
+        <h3>Parks</h3>
+        <input type="text" placeholder="search for parks" />
+        <button></button>
+        <p class="parks"></p>
+        <h3>Restaurants</h3>
+        <input type="text" placeholder="search for restaurants" />
+        <button></button>
+        <p class="restaurants"></p>
+        <h3>Meet Ups</h3>
+        <input type="text" placeholder="search for meet-ups" />
+        <button></button>
+        <p class="meetUp"></p>
+        <h3>Concerts</h3>
+        <input type="text" placeholder="search for concerts" />
+        <button></button>
+        <p class="concerts"></p>
+      </div>
+      <div class="search-container"></div>
+      <div class="results-container">
+        <h2>Your Results</h2>
+        <p>Save your favorites and add them to your itinerary!</p>
+      </div>
+      <div class="itinerary-container">
+        <h2>My Itinerary</h2>
+    </article>
+
+    
+
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/domBuilder.js"></script>
+    <script src="./scripts/DomComponents.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/eventListener.js"></script>
+  </body>
+</html> -->
